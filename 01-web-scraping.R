@@ -54,10 +54,4 @@ page %>%
   html_nodes("#Techniques") %>%
   html_text()
 
-#### Cleaning Up the scraped elements text
-page %>%
-  html_nodes("mw-content-text > div:nth-child(22)") %>%
-  html_text() %>%
-  strsplit(split = "\n") %>%
-  unlist() %>%
-  .[. != ""]
+
