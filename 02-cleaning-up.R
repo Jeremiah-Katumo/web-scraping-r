@@ -3,6 +3,10 @@ library(rvest)
 page <- read_html ("https://en.wikipedia.org/wiki/Web_scraping")
 
 #### Cleaning Up the scraped elements text
+page %>% 
+  html_nodes ("#mw-content-text > div:nth-child(22)") %>% 
+  html_text ()
+
 page %>%
   html_nodes("mw-content-text") %>%
   html_text() %>%
