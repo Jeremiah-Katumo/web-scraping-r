@@ -40,3 +40,16 @@ div <- page %>%
   html_nodes("div") %>%
   html_text()
 div
+
+#### scraping specific html elements
+body <- page %>%
+  html_nodes("#mw-content-text") %>%
+  html_text()
+# read the first 180 characters
+substr(body, start = 1, stop = 180)
+# read last 50 characters
+substr(body, start = nchar(body)-50, stop = nchar(body))
+# scraping a specific heading
+page %>% 
+  html_nodes("#Techniques") %>%
+  html_text()
