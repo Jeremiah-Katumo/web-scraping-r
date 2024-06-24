@@ -14,3 +14,5 @@ pkgs <- c("ggplot2", "dplyr", "tidyr",
           "ggbeeswarm")
 
 install.packages(pkgs)
+
+ggplot2::ggplot()
